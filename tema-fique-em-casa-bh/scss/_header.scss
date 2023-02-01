@@ -1,0 +1,15 @@
+#header {
+  position: relative;
+  background: linear-gradient(165.25deg, #001C54 0%, #4F89FF 101.5%), url('../img/header-inner.jpg') no-repeat center center;
+  height: 400px;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  @include background-cover;
+  hr{
+      color: $primary;
+      background-color: $primary;
+      height: 3px;
+      max-width: 2.25em;
+  }
+}
+

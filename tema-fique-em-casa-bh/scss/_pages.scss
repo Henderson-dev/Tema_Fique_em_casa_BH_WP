@@ -1,0 +1,21 @@
+$pd-top-deafult: 8rem;
+.content_page{
+  padding-top: $pd-top-deafult;
+  &#mask{
+    background: url(/img/mask.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+  #pc_d{
+    padding-top: 3rem;
+    @media screen and (min-width: 991px){
+      padding-top: $pd-top-deafult;
+    }
+  }
+  #map{
+    p{
+      @include rhythm(14, 22);
+    }
+  }
+}

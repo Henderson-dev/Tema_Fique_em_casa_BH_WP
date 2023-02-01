@@ -1,0 +1,19 @@
+// Fonts
+@import "font.scss";
+//bootstrap 
+@import "bootstrap4.scss";
+@import "bootstrap4/mixins";
+// Core variables and mixins
+@import "variables.scss";
+@import "mixins.scss";
+// Reset
+@import "reset.scss";
+// Global CSS
+@import "global.scss";
+// Components
+@import "header.scss";
+@import "pages.scss";
+@import "footer.scss";
+// @import "testimonials.scss";
+// @import "call-to-action.scss";
+// @import "footer.scss";

@@ -1,0 +1,70 @@
+// Mixins
+// Background Cover Mixin
+@mixin background-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+// Font Mixins
+@mixin body-font {
+  font-family: 'Sen', sans-serif;
+}
+
+//font size 
+@mixin font-size($sizeValue: 16 ){
+  font-size: $sizeValue + px; //fallback for old browsers
+  font-size: (0.0625 * $sizeValue) + rem;
+}
+  
+@mixin line-height($heightValue: 20 ){
+  line-height: $heightValue + px; //fallback for old browsers
+  line-height: (0.0625 * $heightValue) + rem;
+}
+  
+@mixin rhythm($sizeValue: 16, $heightValue: 20) {
+  @include font-size($sizeValue);
+  @include line-height($heightValue);
+}
+
+//btn 
+%btn{
+  border-radius: $border-radius-default;
+  background: $primary;
+  color: #fff;
+  font-style: normal;
+  font-weight: 700;
+  @include rhythm(16, 22);
+  text-align: center;
+  letter-spacing: 1.1px;
+  border: none;
+  border-bottom: 6px solid $primary_v2;
+  text-transform: none;
+  margin-top: 1rem;
+  transition: background .45s ease-out;
+  padding: 14px 30px;
+  // box-shadow: 0px 14px 22px rgba(0, 0, 0, 0.26);
+  &:hover, &:focus, &:active, &:not(:disabled):not(.disabled):active{
+      transition: background .45s ease-out;
+      color: #fff;
+      // box-shadow: 0px 14px 22px rgba(0, 0, 0, 0.26);
+      background: $primary_v3 0%;
+  }
+}
+
+//title and text
+%h1-header{
+    margin: 2rem 0;
+}
+%font-style{
+  font-style: normal;
+}
+
+//placeholders
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}

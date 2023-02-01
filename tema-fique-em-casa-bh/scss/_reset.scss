@@ -1,0 +1,9 @@
+.btn, a{
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+textarea{
+  resize: none;
+}
